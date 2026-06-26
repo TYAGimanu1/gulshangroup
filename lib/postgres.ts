@@ -1,4 +1,4 @@
-import { Pool } from 'pg';
+import { Pool, QueryResultRow } from 'pg';
 
 if (!process.env.DATABASE_URL) {
   throw new Error('Please define the DATABASE_URL environment variable inside .env.local');
@@ -11,7 +11,7 @@ const pool = new Pool({
   },
 });
 
-export async function query<T>(text: string, params?: Array<unknown>): Promise<T[]> {
+export async function query<T extends QueryResultRow = any>(text: string, params?: Array<unknown>): Promise<T[]> {
   const result = await pool.query<T>(text, params);
   return result.rows;
 }
