@@ -448,11 +448,10 @@
   background:
               url('/assets/images/gulshan3.jpg') top center/100% auto no-repeat !important;
   text-align: center;
-  padding: 1rem 5vw;
+  padding: 6rem 5vw;
   border-top: 1px solid rgba(184,150,46,0.2);
   border-bottom: 1px solid rgba(184,150,46,0.2);
   position: relative;
-  height: 800px;
 }
 
 .priceSection::before {
@@ -468,18 +467,60 @@
   line-height: 1;
 }
 
-.priceHeading {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 400;
-  color: #1A1410;
+.priceContent {
   position: relative;
   z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.92);
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
 }
 
-.priceHeading strong {
+.priceHeading {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 400;
+  color: #1A1410;
+  margin-bottom: 1.25rem;
+}
+
+.priceTableWrapper {
+  overflow-x: auto;
+}
+
+.priceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.priceTable th,
+.priceTable td {
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(148, 131, 106, 0.18);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.priceTable th {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #4a3728;
+  background: rgba(223,194,153,0.12);
+}
+
+.priceTable tr:nth-child(even) {
+  background: rgba(242, 238, 233, 0.65);
+}
+
+.priceOnRequest {
   color: #7B2D3E;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .priceNote {

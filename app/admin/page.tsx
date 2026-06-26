@@ -18,7 +18,7 @@ export default async function AdminPage() {
     <main className={styles.adminRoot}>
       {/* Navigation */}
       <nav>
-        <h1>Gulshan Group Admin</h1>
+        <h1>Gulshan Groups Admin</h1>
         <a href="/">← Home</a>
       </nav>
 
@@ -68,7 +68,7 @@ export default async function AdminPage() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2026 Gulshan Group. All rights reserved.</p>
+        <p>&copy; 2026 Gulshan Groups. All rights reserved.</p>
       </footer>
     </main>
   );

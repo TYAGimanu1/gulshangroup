@@ -210,15 +210,45 @@ export default function Home() {
 
       {/* Price CTA */}
       <section className={styles.priceSection}>
-    
+        <div className={styles.priceContent}>
+          <h2 className={styles.priceHeading}>Price List</h2>
+          <div className={styles.priceTableWrapper}>
+            <table className={styles.priceTable}>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Super Area</th>
+                  <th>Price*</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>3 BHK + 2T</td>
+                  <td>1475 SQ.FT</td>
+                  <td className={styles.priceOnRequest}>PRICE ON REQUEST</td>
+                </tr>
+                <tr>
+                  <td>3 BHK + 3T</td>
+                  <td>1775 SQ.FT</td>
+                  <td className={styles.priceOnRequest}>PRICE ON REQUEST</td>
+                </tr>
+                <tr>
+                  <td>3 BHK + 4T</td>
+                  <td>2075 SQ.FT</td>
+                  <td className={styles.priceOnRequest}>PRICE ON REQUEST</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
 
       {/* About */}
       <section id="about" className={styles.about}>
         <div className={styles.aboutContainer}>
-          <h2 className={`${styles.sectionTitle} ${styles.revealLeft}`}>About Gulshan Group</h2>
+          <h2 className={`${styles.sectionTitle} ${styles.revealLeft}`}>About Gulshan Groups</h2>
           <p className={`${styles.aboutTextLead} ${styles.reveal}`}>
-            Gulshan Group has been part of the NCR real estate market for 36 years, with experience in delivering luxuries and enduring grandeur. If you have looked at properties in Noida and Greater Noida West, chances are you have already come across our name.
+            Gulshan Groups has been part of the NCR real estate market for 36 years, with experience in delivering luxuries and enduring grandeur. If you have looked at properties in Noida and Greater Noida West, chances are you have already come across our name.
           </p>
           <p className={`${styles.aboutText} ${styles.reveal}`}>
             What has made Gulshan so popular over the years is that we have stayed consistent. We focus on delivering homes that actually make sense for the people living in them. The basics like good layouts, enough space and better ventilation are done right.
@@ -230,7 +260,7 @@ export default function Home() {
             We have also built a reputation for being fairly reliable when it comes to delivery timelines, which, as you know, is a big deal in real estate.
           </p>
           <p className={`${styles.aboutText} ${styles.reveal}`}>
-            Overall, Gulshan Group Noida is not about some normal projects. It is more about steady work, premium homes and building trust over time, which is why more than 7500 customers and investors keep trusting and investing in Gulshan Homes.
+            Overall, Gulshan Groups Noida is not about some normal projects. It is more about steady work, premium homes and building trust over time, which is why more than 7500 customers and investors keep trusting and investing in Gulshan Homes.
           </p>
         </div>
       </section>
@@ -271,7 +301,7 @@ export default function Home() {
       {/* Why Us */}
       <section id="why-us" className={styles.whyUs}>
         <div className={styles.whyUsContainer}>
-          <h2 className={`${styles.sectionTitleCenter} ${styles.reveal}`}>Why Choose Gulshan Group?</h2>
+          <h2 className={`${styles.sectionTitleCenter} ${styles.reveal}`}>Why Choose Gulshan Groups?</h2>
           <div className={`${styles.featuresGrid} ${styles.stagger}`}>
             {features.map((feature, i) => (
               <div key={i} className={`${styles.featureCard} ${styles.reveal}`}>
@@ -381,7 +411,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className={styles.footer}>
-        <div className={styles.footerLogo}>Gulshan Group</div>
+        <div className={styles.footerLogo}>Gulshan Groups</div>
         <p className={styles.footerTagline}>Connecting buyers, sellers, and investors with premium properties in NCR</p>
         <div className={styles.footerLinks}>
         </div>

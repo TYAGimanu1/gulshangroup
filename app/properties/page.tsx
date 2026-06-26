@@ -13,7 +13,7 @@ export default function PropertiesPage() {
     <main className={styles.root}>
       {/* Navigation */}
       <nav>
-        <a href="/" className={styles.navBack}>{'Gulshan Group'}</a>
+        <a href="/" className={styles.navBack}>{'Gulshan Groups'}</a>
         <a href="/" className={styles.navBack}>{'← Back Home'}</a>
       </nav>
 
@@ -62,7 +62,7 @@ export default function PropertiesPage() {
 
       {/* Footer */}
       <footer>
-        <p>&copy; 2026 Gulshan Group. All rights reserved.</p>
+        <p>&copy; 2026 Gulshan Groups. All rights reserved.</p>
       </footer>
     </main>
   );
