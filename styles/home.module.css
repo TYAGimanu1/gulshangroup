@@ -147,7 +147,7 @@
   z-index: 2;
 }
 
-.heroLeft { position: relative; }
+.heroLeft { position: relative; min-height: 420px; }
 
 .heroRight { display: flex; align-items: center; justify-content: center; }
 
