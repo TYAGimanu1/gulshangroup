@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Ultra-Luxury Premium Real Estate Styling (properties.module.css)
+   ========================================================================== */
+
+/* Root Main Body Container (uses global CSS variables) */
+.root {
+  background-color: var(--bg-dark-core);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(243, 215, 176, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(30, 41, 59, 0.5) 0%, transparent 50%);
+  min-height: 100vh;
+  color: var(--text-pure);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 0;
+}
+
+/* --- Translucent Fixed Header Navigation --- */
+.root nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 6%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Module-local root (uses global variables from globals.css) */
+.root {
+  background-color: var(--bg-dark-core);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(243, 215, 176, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(30, 41, 59, 0.5) 0%, transparent 50%);
+  min-height: 100vh;
+  color: var(--text-pure);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  padding-bottom: 0;
+}
+  position: relative;
+  padding: 12rem 6% 8rem 6%;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(11, 15, 25, 0.3), var(--bg-dark-portal)),
+              url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  animation: premiumFadeDown 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.propertiesHeader h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.propertiesHeader p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* --- Floating Sleek Glassmorphic Filter Hub --- */
+.filters {
+  max-width: 960px;
+  margin: -3.5rem auto 4rem auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+  animation: premiumFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.filtersContainer {
+  background: rgba(22, 30, 49, 0.6);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  padding: 1.25rem;
+  border-radius: 24px;
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  border: 1px solid var(--card-border-glass);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.searchInput, .searchSelect {
+  flex: 1;
+  min-width: 220px;
+  padding: 1rem 1.5rem;
+  background: rgba(11, 15, 25, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  font-size: 0.95rem;
+  color: var(--text-pure);
+  outline: none;
+  transition: var(--transition-premium);
+}
+
+.searchInput::placeholder {
+  color: #475569;
+}
+
+.searchInput:focus, .searchSelect:focus {
+  border-color: var(--gold-primary);
+  background: rgba(11, 15, 25, 0.8);
+  box-shadow: 0 0 20px rgba(223, 194, 153, 0.1);
+}
+
+.searchBtn {
+  background: var(--gold-primary);
+  color: #0b0f19;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-premium);
+}
+
+.searchBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(223, 194, 153, 0.3);
+  background: #ffffff;
+}
+
+/* --- Properties Layout Sections --- */
+.propertiesSection {
+  padding: 0 6% 8rem 6%;
+}
+
+.propertiesContainer {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+}
+
+/* --- Architectural Grid Cards --- */
+.propertyCard {
+  background: var(--card-bg-glass);
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid var(--card-border-glass);
+  transition: var(--transition-premium);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Elegant staggered entry load styles */
+.propertyCard:nth-child(1) { animation: premiumFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.propertyCard:nth-child(2) { animation: premiumFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both; }
+.propertyCard:nth-child(3) { animation: premiumFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+.propertyImage {
+  height: 260px;
+  background: linear-gradient(145deg, #161e31, #0b0f19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5.5rem;
+  position: relative;
+  transition: var(--transition-premium);
+  border-bottom: 1px solid var(--card-border-glass);
+}
+
+.propertyDetails {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.propertyDetails h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+  color: var(--text-pure);
+}
+
+.propertyPrice {
+  font-size: 1.6rem;
+  color: var(--gold-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.propertySpecs {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.propertyBtn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-pure);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-premium);
+  letter-spacing: 0.5px;
+}
+
+/* Hover Dynamic States */
+.propertyCard:hover {
+  transform: translateY(-12px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(223, 194, 153, 0.3);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(223, 194, 153, 0.03);
+}
+
+.propertyCard:hover .propertyImage {
+  background: linear-gradient(145deg, #1e2942, #0b0f19);
+}
+
+.propertyCard:hover .propertyBtn {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: #0b0f19;
+  box-shadow: 0 10px 25px rgba(223, 194, 153, 0.25);
+}
+
+/* --- Clean Dark Footer Component --- */
+.root footer {
+  background: #06080f;
+  color: #475569;
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   CSS Keyframes Animations
+   ========================================================================== */
+@keyframes premiumFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes premiumFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Responsive Optimization Viewports */
+@media (max-width: 768px) {
+  .propertiesHeader h1 {
+    font-size: 2.5rem;
+  }
+  .filters {
+    margin-top: -2rem;
+  }
+  .filtersContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
