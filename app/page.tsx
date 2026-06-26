@@ -135,8 +135,7 @@ export default function Home() {
               ))}
             </div>
             <div className={styles.heroOverlayText}>
-              <h1 className={styles.heroTitle}>Gulshan Group</h1>
-              <p className={styles.heroSubtitle}>36 Years of Creating Unparalleled Luxury with Heart and Trust</p>
+              
             </div>
           </div>
 
