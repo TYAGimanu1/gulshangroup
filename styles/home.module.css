@@ -1248,8 +1248,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 70vh;
-    padding: 6rem 5vw 4rem;
+    min-height: auto;
+    padding: 4rem 5vw 2rem;
   }
 
   .hero::before {
@@ -1266,28 +1266,55 @@
     left: -80px;
   }
 
-  .heroTitle {
-    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .heroSubtitle {
-    font-size: clamp(0.95rem, 2vw, 1.1rem);
+  .heroLeft,
+  .heroRight {
+    width: 100%;
+  }
+
+  .heroOverlayText {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    top: auto;
+    transform: none;
+    color: #1A1410;
+    text-align: center;
     max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .heroOverlayText h1,
+  .heroOverlayText p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .leadCard {
+    padding: 1.75rem;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
   }
 
   .priceSection {
-    height: auto;
-    min-height: 400px;
+    min-height: auto;
     padding: 3rem 5vw;
   }
 
-  .priceSection::before {
-    font-size: 8rem;
-    opacity: 0.025;
+  .priceContent {
+    padding: 1.5rem;
   }
 
-  .priceHeading {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  .priceTable th,
+  .priceTable td {
+    padding: 0.9rem 0.9rem;
+  }
+
+  .priceTable {
+    font-size: 0.92rem;
   }
 
   .navLinks { display: none; }
@@ -1302,28 +1329,40 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 60vh;
-    padding: 5rem 5vw 3rem;
+    min-height: auto;
+    padding: 4rem 4vw 2rem;
   }
 
   .hero::before {
-    width: 200px;
-    height: 200px;
-    top: -80px;
-    right: -80px;
+    width: 180px;
+    height: 180px;
+    top: -60px;
+    right: -60px;
   }
 
-  .hero::after {
-    display: none;
+  .heroOverlayText {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    padding: 0;
+    color: #1A1410;
+    text-align: center;
+  }
+
+  .heroLeft,
+  .heroRight {
+    width: 100%;
   }
 
   .heroTitle {
-    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-size: clamp(1.8rem, 10vw, 2.4rem);
   }
 
   .heroSubtitle {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
   }
 
   .titleSmall {
@@ -1332,21 +1371,35 @@
   }
 
   .priceSection {
-    min-height: 350px;
-    padding: 2rem 5vw;
+    min-height: auto;
+    padding: 2rem 4vw;
+  }
+
+  .priceContent {
+    padding: 1rem;
   }
 
   .priceSection::before {
-    font-size: 5rem;
+    font-size: 4rem;
+    top: 20px;
   }
 
   .priceHeading {
-    font-size: 1.6rem;
-    margin-top: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 
-  .priceNote {
-    font-size: 0.7rem;
+  .priceTable th,
+  .priceTable td {
+    padding: 0.75rem 0.75rem;
+  }
+
+  .priceTable {
+    font-size: 0.85rem;
+  }
+
+  .priceTableWrapper {
+    overflow-x: auto;
   }
 
   .statsContainer { grid-template-columns: 1fr 1fr; }
