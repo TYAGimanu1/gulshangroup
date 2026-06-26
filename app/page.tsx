@@ -121,25 +121,79 @@ export default function Home() {
 
       {/* Hero */}
       <section className={styles.hero}>
-        <div className={styles.heroCarousel}>
-          {carouselImages.map((image, index) => (
-            <div
-              key={index}
-              className={`${styles.heroSlide} ${index === currentImageIndex ? styles.heroSlideActive : ''}`}
-              style={{
-                backgroundImage: `linear-gradient(rgba(123, 45, 62, 0.2), rgba(123, 45, 62, 0.2)), url('${image}')`,
-              }}
-            />
-          ))}
-        </div>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Gulshan Group</h1>
-          <p className={styles.titleSmall}>5-Star Serviced Apartments</p>
-          <p className={styles.heroSubtitle}>36 Years of Creating Unparalleled Luxury with Heart and Trust</p>
-          <div className={styles.heroButtons}>
-            <button className={`${styles.btn} ${styles.btnPrimary}`}>Get Project Details</button>
-            <button className={`${styles.btn} ${styles.btnSecondary}`}>Learn More</button>
+        <div className={styles.heroInner}>
+          <div className={styles.heroLeft}>
+            <div className={styles.heroCarousel}>
+              {carouselImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`${styles.heroSlide} ${index === currentImageIndex ? styles.heroSlideActive : ''}`}
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(123, 45, 62, 0.15), rgba(123, 45, 62, 0.15)), url('${image}')`,
+                  }}
+                />
+              ))}
+            </div>
+            <div className={styles.heroOverlayText}>
+              <h1 className={styles.heroTitle}>Gulshan Group</h1>
+              <p className={styles.heroSubtitle}>36 Years of Creating Unparalleled Luxury with Heart and Trust</p>
+            </div>
           </div>
+
+          <aside className={styles.heroRight}>
+            <div className={styles.leadCard}>
+              <div className={styles.leadHeader}>
+                <h3>Gulshan Raj Nagar Extension</h3>
+                <p className={styles.leadSub}>Enter your details and we'll call you</p>
+              </div>
+
+              <form className={styles.leadForm} onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  placeholder="Enter Name*"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className={styles.input}
+                />
+
+                <input
+                  type="email"
+                  placeholder="Enter Email id*"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  className={styles.input}
+                />
+
+                <input
+                  type="tel"
+                  placeholder="Enter 10 Digit Mobile No.*"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
+                  className={styles.input}
+                />
+
+                <textarea
+                  placeholder="Message*"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  rows={4}
+                  className={styles.textarea}
+                />
+
+                <button type="submit" className={styles.submitBtn} disabled={isLoading}>
+                  {isLoading ? 'Submitting...' : 'Submit'}
+                </button>
+                {formMessage && (
+                  <div className={formMessage.type === 'success' ? styles.msgSuccess : styles.msgError}>
+                    {formMessage.text}
+                  </div>
+                )}
+              </form>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -157,8 +211,7 @@ export default function Home() {
 
       {/* Price CTA */}
       <section className={styles.priceSection}>
-        <h2 className={`${styles.priceHeading} ${styles.reveal}`}>Price Starts: ₹ 75 Lacs*</h2>
-        <p  className={`${styles.priceNote}    ${styles.reveal}`}>*Terms and conditions apply</p>
+    
       </section>
 
       {/* About */}
@@ -332,8 +385,6 @@ export default function Home() {
         <div className={styles.footerLogo}>Gulshan Group</div>
         <p className={styles.footerTagline}>Connecting buyers, sellers, and investors with premium properties in NCR</p>
         <div className={styles.footerLinks}>
-          <a href="tel:+919667367666" className={styles.footerLink}>📞 +91-9667367666</a>
-          <a href="mailto:info@gulshan.com" className={styles.footerLink}>✉️ info@gulshan.com</a>
         </div>
         <p className={styles.copyright}>&copy; 2026 Gulshan Group. All rights reserved.</p>
       </footer>
