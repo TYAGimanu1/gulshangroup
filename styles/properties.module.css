@@ -44,6 +44,8 @@
   overflow-x: hidden;
   padding-bottom: 0;
 }
+
+.propertiesHeader {
   position: relative;
   padding: 12rem 6% 8rem 6%;
   text-align: center;
