@@ -74,6 +74,55 @@
   transition: color 0.3s ease;
 }
 
+.mobileMenuButton {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(74, 55, 40, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenuIcon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #4A3728;
+  position: relative;
+}
+
+.mobileMenuIcon::before,
+.mobileMenuIcon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #4A3728;
+}
+
+.mobileMenuIcon::before { top: -7px; }
+.mobileMenuIcon::after { top: 7px; }
+
+.navLinksOpen {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 1rem 5vw 1.25rem;
+  background: rgba(250, 248, 244, 0.98);
+  border-bottom: 1px solid rgba(180, 140, 60, 0.18);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.08);
+  z-index: 90;
+}
+
 .navLink::after {
   content: '';
   position: absolute;
@@ -1318,6 +1367,20 @@
   }
 
   .navLinks { display: none; }
+  .navLinksOpen {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 0.85rem 0;
+    text-align: center;
+  }
+
+  .mobileMenuButton { display: flex; }
   .statsContainer { grid-template-columns: repeat(2, 1fr); }
   .statItem:nth-child(2)::after { display: none; }
   .statItem { padding: 2rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.08); }

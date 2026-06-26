@@ -57,6 +57,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [formMessage, setFormMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const carouselImages = [
     '/assets/images/gulshan1.jpg',
@@ -109,13 +110,24 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className={styles.nav}>
-        <span className={styles.navLogo}>Gulshan Group</span>
-        <div className={styles.navLinks}>
-          <a href="#projects" className={styles.navLink}>Projects</a>
-          <a href="#about"    className={styles.navLink}>About</a>
-          <a href="#why-us"   className={styles.navLink}>Why Us</a>
-          <a href="#faq"      className={styles.navLink}>FAQ</a>
-          <a href="#contact"  className={styles.navLink}>Contact</a>
+        <span className={styles.navLogo}>Gulshan Groups</span>
+
+        <button
+          type="button"
+          className={styles.mobileMenuButton}
+          aria-expanded={mobileMenuOpen}
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          onClick={() => setMobileMenuOpen((prev) => !prev)}
+        >
+          <span className={styles.mobileMenuIcon} />
+        </button>
+
+        <div className={`${styles.navLinks} ${mobileMenuOpen ? styles.navLinksOpen : ''}`}>
+          <a href="#projects" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>Projects</a>
+          <a href="#about" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>About</a>
+          <a href="#why-us" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>Why Us</a>
+          <a href="#faq" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+          <a href="#contact" className={styles.navLink} onClick={() => setMobileMenuOpen(false)}>Contact</a>
         </div>
       </nav>
 
